@@ -10,7 +10,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-connectDB;
+connectDB();
 app.post('/register', (req, res) => {
   const { name, email, password } = req.body;
   RegisterModel.findOne({ email: email })
