@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "builds": [{ "src": ".js", "use": "@vercel/nodemon" }],
+  "builds": [{ "src": "./index.js", "use": "@vercel/nodemon" }],
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/"
+      "dest": "/index.js"
     }
   ]
 }
