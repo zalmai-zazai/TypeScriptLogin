@@ -7,7 +7,13 @@ import { LoginModel } from './models/Login';
 import connectDB from './db';
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: ['https://deploy-mern-1whq.vercel.app'],
+    methods: ['POST', 'GET'],
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 connectDB();
